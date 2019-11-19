@@ -1,21 +1,15 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
+// import { Link } from "react-router-dom";
+import { Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
+import { Input, FormBtn } from "../components/Form";
 
 
 class Search extends Component {
     state = {
         books: []
-    }
-
-
-
-
-    componentDidMount() {
     }
 
 
@@ -70,7 +64,7 @@ class Search extends Component {
 
     render() {
         return (<Container fluid>
-            {/* <Row> */}
+          
 
 
             <form>
@@ -88,7 +82,6 @@ class Search extends Component {
                   </FormBtn>
             </form>
 
-            {/* </Row> */}
             {this.state.books.length ? (
                 <List>
                     {this.state.books.map(book => (
