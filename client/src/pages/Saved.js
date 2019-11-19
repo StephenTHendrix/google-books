@@ -16,7 +16,6 @@ class Saved extends Component {
     this.loadBooks();
   }
   
-
   loadBooks = () => {
     API.getBooks()
       .then(res =>
